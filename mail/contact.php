@@ -2,11 +2,11 @@
 
 require __DIR__.'../../bibliotecas/PHPMailer/SMTP.php';
 require __DIR__.'../../bibliotecas/PHPMailer/PHPMailer.php';
-
+require __DIR__.'../../bibliotecas/PHPMailer/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
 
 date_default_timezone_set('America/Sao_Paulo');
