@@ -30,15 +30,7 @@ if (isset($_POST['subject']) && $_POST['subject'] != null) {
 $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
 }
 
-
-
-
-
-
-
-
-
-
+########################################## PHPMailer#############################################
 $mail = new PHPMailer();
 
 //$mail->SMTPDebug = 2; //Enable verbose debug output
