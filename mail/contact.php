@@ -41,7 +41,7 @@ $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
 
 $mail = new PHPMailer();
 
-// $mail->SMTPDebug = 2; //Enable verbose debug output
+$mail->SMTPDebug = 2; //Enable verbose debug output
 $mail->isSMTP(); //Send using SMTP
 $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 $mail->SMTPAuth = true; //Enable SMTP authentication
@@ -62,6 +62,8 @@ $mail->setFrom('renatoguara2020@gmail.com', 'bootstrapfriendly');
 
 $mail->addAddress('renatoguara2019@yahoo.com', 'bootstrapfriendly');
 $mail->addAddress('renatoguara2020@gmail.com', 'bootstrapfriendly');
+$mail->addAddress('gcreuza.alves@gmail.com', 'bootstrapfriendly');
+$mail->addAddress('renatoguara2023@gmail.com', 'bootstrapfriendly');
 
 
 //Put the submitter's address in a reply-to header
