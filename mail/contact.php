@@ -41,12 +41,12 @@ $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
 
 $mail = new PHPMailer();
 
-$mail->SMTPDebug = 2; //Enable verbose debug output
+//$mail->SMTPDebug = 2; //Enable verbose debug output
 $mail->isSMTP(); //Send using SMTP
 $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 $mail->SMTPAuth = true; //Enable SMTP authentication
 $mail->Username = 'renatoguara2020@gmail.com'; //SMTP username
-$mail->Password = 'agc'; // password is optional //SMTP password
+$mail->Password = 'ag'; // password is optional //SMTP password
 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 $mail->Port = 587;
 $mail->CharSet = 'UTF-8';
@@ -74,7 +74,7 @@ $mail->Subject = 'Contact Request from bootstrapfriendly demo form';
 //Keep it simple - don't use HTML
 $mail->isHTML(true);
 ?>
-//Build a simple message body
+
 <!doctype html>
 <html lang="en">
 
@@ -92,8 +92,8 @@ $mail->Body = "
 <table
     style=' border:5px solid #0033f1; width:440px; margin:auto; padding:15px; font-size:17px; border-radius:6px; background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)); background-size: contain; background-repeat: no-repeat; background-position: center; color:#222;'>
     <tr>
-        <td style='padding:8px; border:1px solid #ccc;'>Name:</td>
-        <td style='padding:8px;border:1px solid #ccc;'> {$_POST['name']} </td>
+        <td style='padding:8px; border:1px solid #1111;'>Name:</td>
+        <td style='padding:8px;border:1px solid #cccc;'> {$_POST['name']} </td>
     </tr>
     <tr>
         <td style='padding:8px; border:1px solid #ccc;'>Email ID :</td>
@@ -119,10 +119,10 @@ if (!$mail->send()) {
 //The reason for failing to send will be in $mail->ErrorInfo
 //but you shouldn't display errors to users - process the error, log it on your server.
 
-echo "<b class='text-danger'>Sorry, something went wrong. Please try again later.</b>";
+echo "<div class='alert alert-danger'>Sorry, something went wrong. Please try again later.</div>";
 } else {
 
-echo "<b class='text-success'>message sent successfully </b>";
+echo "<div class='alert alert-success' role='alert'>message sent successfully </div>";
 }
 } else {
 
@@ -132,6 +132,8 @@ echo "<b class='text-danger'>Invalid email address, message ignored.</b>";
 } else {
 echo "<b class='text-danger'>Sorry, something went wrong. Please try again later.</b>";
 }
+
+header('Location: http://localhost/security-guard-website-template/contact.html')
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
