@@ -106,6 +106,7 @@ $mail->Body = "
 if (!$mail->send()) {
 //The reason for failing to send will be in $mail->ErrorInfo
 //but you shouldn't display errors to users - process the error, log it on your server.
+
 echo "<b class='text-danger'>Sorry, something went wrong. Please try again later.</b>";
 } else {
 
