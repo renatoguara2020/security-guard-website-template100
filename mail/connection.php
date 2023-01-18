@@ -26,7 +26,7 @@ try {
 } catch(PDOException $e) {
   echo  "</br>" . $e->getMessage() . "</br>" . $e->getCode();
 }
-$query = 'select * from tb_usuarios';
+$query = 'SELECT * from tb_usuarios';
 
 $stmt = $conn->query($query); //PDO Statemet
 $lista = $stmt->fetchAll(PDO::FETCH_ASSOC); //retorno associativo 
