@@ -14,7 +14,7 @@ try {
   $stmt->bindValue(':lastname', $lastname, PDO::PARAM_STR);
   $stmt->bindValue(':email', $email, PDO::PARAM_STR);
   
-  $conn->exec($sql);
+  $stmt->execute();
   echo "New record created successfully";
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
