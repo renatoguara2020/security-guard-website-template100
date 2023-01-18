@@ -24,9 +24,12 @@ try {
   $stmt->execute();
   echo "New record created successfully";
 } catch(PDOException $e) {
-  echo $sql . "<br>" . $e->getMessage();
+  echo  "</br>" . $e->getMessage() . "</br>" . $e->getCode();
 }
+$query = 'select * from tb_usuarios';
 
+$stmt = $conn->query($query); //PDO Statemet
+$lista = $stmt->fetchAll(PDO::FETCH_ASSOC); //retorno associativo 
 }
 
 $conn = null;
