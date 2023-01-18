@@ -38,7 +38,7 @@ $mail->isSMTP(); //Send using SMTP
 $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
 $mail->SMTPAuth = true; //Enable SMTP authentication
 $mail->Username = 'renatoguara2020@gmail.com'; //SMTP username
-$mail->Password = 'ag'; // password is optional //SMTP password
+$mail->Password = 'agciq'; // password is optional //SMTP password 
 // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 $mail->Port = 587;
 $mail->CharSet = 'UTF-8';
@@ -82,7 +82,7 @@ $mail->Body = "
 
 
 <table
-    style=' border:5px solid #0033f1; width:440px; margin:auto; padding:15px; font-size:17px; border-radius:6px; background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)); background-size: contain; background-repeat: no-repeat; background-position: center; color:#222;'>
+    style=' border:5px solid #ffff00; width:440px; margin:auto; padding:15px; font-size:17px; border-radius:6px; background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)); background-size: contain; background-repeat: no-repeat; background-position: center; color:#222;'>
     <tr>
         <td style='padding:8px; border:1px solid #1111;'>Name:</td>
         <td style='padding:8px;border:1px solid #cccc;'> {$_POST['name']} </td>
