@@ -4,7 +4,7 @@ $username = "username";
 $password = "password";
 $dbname = "myDBPDO";
 
-if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["email"])){
+if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 
     echo "Please enter your first name";
     echo "and your last name & email address";
