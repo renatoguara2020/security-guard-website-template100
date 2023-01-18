@@ -4,10 +4,10 @@ $username = "username";
 $password = "password";
 $dbname = "myDBPDO";
 
-if(empty($_POST["firstname"]) && empty($_POST["lastname"]) && empty($_POST["email"]) && empty($_POST["email"])){
+if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["email"])){
 
     echo "Please enter your first name";
-    echo "and your last name";
+    echo "and your last name & email address";
     
 }else{
 
