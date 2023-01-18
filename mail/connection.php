@@ -30,6 +30,9 @@ $query = 'select * from tb_usuarios';
 
 $stmt = $conn->query($query); //PDO Statemet
 $lista = $stmt->fetchAll(PDO::FETCH_ASSOC); //retorno associativo 
+echo '<pre>';
+        print_r($lista);
+echo '</pre>';
 }
 
 $conn = null;
