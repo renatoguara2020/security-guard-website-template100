@@ -4,6 +4,13 @@ $username = "username";
 $password = "password";
 $dbname = "myDBPDO";
 
+if(empty($_POST["firstname"]) && empty($_POST["lastname"]) && empty($_POST["email"]) && empty($_POST["email"])){
+
+    echo "Please enter your first name";
+    echo "and your last name";
+    
+}else{
+
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
@@ -18,6 +25,8 @@ try {
   echo "New record created successfully";
 } catch(PDOException $e) {
   echo $sql . "<br>" . $e->getMessage();
+}
+
 }
 
 $conn = null;
