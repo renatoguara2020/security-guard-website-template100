@@ -82,7 +82,7 @@ $mail->Body = "
 
 
 <table
-    style=' border:5px solid #ffff00; width:440px; margin:auto; padding:15px; font-size:17px; border-radius:6px; background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)); background-size: contain; background-repeat: no-repeat; background-position: center; color:#222;'>
+    style=' border:5px solid #00ff00; width:440px; margin:auto; padding:15px; font-size:17px; border-radius:6px; background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)); background-size: contain; background-repeat: no-repeat; background-position: center; color:#222;'>
     <tr>
         <td style='padding:8px; border:1px solid #1111;'>Name:</td>
         <td style='padding:8px;border:1px solid #cccc;'> {$_POST['name']} </td>
